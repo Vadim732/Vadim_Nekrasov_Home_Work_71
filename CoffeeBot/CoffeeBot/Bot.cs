@@ -86,7 +86,7 @@ public class Bot
         });
 
         await _botClient.SendTextMessageAsync(mes.Chat.Id,
-            $"Hello, {user.FirstName}!\n" +
+            $"Hello, {user.FirstName}! с:\n" +
             "To start the game, click the \"Start\" button or enter the command \"/game\".\n" +
             "If you want to read the rules of the game, click on the \"Rules\" button, or enter the command \"/help\".",
             replyMarkup: replyMarkup);
@@ -141,7 +141,7 @@ public class Bot
     {
         var user = message.From;
         await _botClient.SendTextMessageAsync(message.Chat.Id,
-            $"{user.FirstName}, thanks for playing!");
+            $"{user.FirstName}, thanks for playing! \ud83c\udf89");
     }
 
     public async Task HandleCallBackQueryAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
